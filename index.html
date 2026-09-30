@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Essence | Alta Perfumería</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0b0b0b] text-[#f3f3f3] font-montserrat antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="#" class="font-cormorant text-2xl md:text-3xl tracking-widest text-[#d4af37] font-bold uppercase">
+                Aura Essence
+            </a>
+
+            <!-- Menú Escritorio -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wider font-medium">
+                <a href="#inicio" class="hover:text-[#d4af37] transition-colors">Inicio</a>
+                <a href="#coleccion" class="hover:text-[#d4af37] transition-colors">Colección</a>
+                <a href="#esencia" class="hover:text-[#d4af37] transition-colors">La Esencia</a>
+                <a href="#opiniones" class="hover:text-[#d4af37] transition-colors">Opiniones</a>
+                <a href="#contacto" class="hover:text-[#d4af37] transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Acciones de Cabecera -->
+            <div class="flex items-center space-x-5">
+                <button id="cart-btn" class="relative text-xl hover:text-[#d4af37] transition-colors cursor-pointer" aria-label="Ver carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-[#d4af37] text-black font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <button id="menu-toggle" class="md:hidden text-xl hover:text-[#d4af37] transition-colors focus:outline-none" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#121212] border-b border-[#262626] py-6 px-6 shadow-2xl">
+            <nav class="flex flex-col space-y-4 text-sm uppercase tracking-wider font-medium">
+                <a href="#inicio" class="mobile-link hover:text-[#d4af37] transition-colors">Inicio</a>
+                <a href="#coleccion" class="mobile-link hover:text-[#d4af37] transition-colors">Colección</a>
+                <a href="#esencia" class="mobile-link hover:text-[#d4af37] transition-colors">La Esencia</a>
+                <a href="#opiniones" class="mobile-link hover:text-[#d4af37] transition-colors">Opiniones</a>
+                <a href="#contacto" class="mobile-link hover:text-[#d4af37] transition-colors">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center z-0 opacity-40 transform scale-105 transition-transform duration-1000" style="background-image: url('https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&q=80&w=1920');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-transparent to-black/60 z-0"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+            <span class="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold">Exclusividad y Elegancia</span>
+            <h1 class="font-cormorant text-5xl md:text-7xl font-bold tracking-wide leading-tight">
+                El Arte de <br><span class="italic font-normal text-[#d4af37]">Cautivar los Sentidos</span>
+            </h1>
+            <p class="text-gray-300 text-sm md:text-base font-light max-w-xl mx-auto leading-relaxed">
+                Fragancias de alta gama elaboradas con los ingredientes más puros del mundo. Diseñadas para dejar una huella inolvidable.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#coleccion" class="w-full sm:w-auto px-8 py-3.5 bg-[#d4af37] text-black font-semibold text-xs uppercase tracking-widest hover:bg-[#c29d2b] transition-all shadow-lg">
+                    Explorar Colección
+                </a>
+                <a href="#esencia" class="w-full sm:w-auto px-8 py-3.5 border border-[#d4af37] text-[#d4af37] font-semibold text-xs uppercase tracking-widest hover:bg-[#d4af37] hover:text-black transition-all">
+                    Nuestra Historia
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN COLECCIÓN DE PRODUCTOS -->
+    <section id="coleccion" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-xs uppercase tracking-[0.25em] text-[#d4af37]">Catálogo Exclusivo</span>
+            <h2 class="font-cormorant text-4xl md:text-5xl font-bold">Nuestras Fragancias</h2>
+            <div class="w-16 h-[1px] bg-[#d4af37] mx-auto mt-4"></div>
+        </div>
+
+        <!-- Filtros de Categoría -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+            <button class="filter-btn active px-6 py-2 text-xs uppercase tracking-wider border border-[#262626] rounded-full transition-all" data-filter="all">Todos</button>
+            <button class="filter-btn px-6 py-2 text-xs uppercase tracking-wider border border-[#262626] rounded-full transition-all" data-filter="femenino">Femenino</button>
+            <button class="filter-btn px-6 py-2 text-xs uppercase tracking-wider border border-[#262626] rounded-full transition-all" data-filter="masculino">Masculino</button>
+            <button class="filter-btn px-6 py-2 text-xs uppercase tracking-wider border border-[#262626] rounded-full transition-all" data-filter="unisex">Unisex</button>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Los productos se inyectarán dinámicamente mediante JS -->
+        </div>
+    </section>
+
+    <!-- SECCIÓN LA ESENCIA -->
+    <section id="esencia" class="py-24 bg-[#121212] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs uppercase tracking-[0.25em] text-[#d4af37]">Artesanía Olfativa</span>
+                <h2 class="font-cormorant text-4xl md:text-5xl font-bold leading-tight">
+                    Creados para contar <span class="italic text-[#d4af37]">tu propia historia</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed">
+                    Cada botella de Aura Essence encierra meses de meticulosa selección botánica. Desde las notas de salida más frescas hasta los fondos amaderados más profundos, nuestros perfumistas combinan tradición artesanal con innovación contemporánea.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-[#d4af37] pl-4">
+                        <h4 class="font-cormorant text-2xl font-bold text-[#d4af37]">100%</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Ingredientes Naturales</p>
+                    </div>
+                    <div class="border-l-2 border-[#d4af37] pl-4">
+                        <h4 class="font-cormorant text-2xl font-bold text-[#d4af37]">24 Horas</h4>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mt-1">Fijación en Piel</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=1000" alt="Perfume artesanal" class="w-full h-[450px] object-cover shadow-2xl rounded-sm">
+                <div class="absolute -bottom-6 -left-6 bg-[#0b0b0b] border border-[#262626] p-6 max-w-xs hidden sm:block">
+                    <p class="font-cormorant italic text-lg text-gray-300">"El perfume es la forma más intensa de la memoria."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN OPINIONES -->
+    <section id="opiniones" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-xs uppercase tracking-[0.25em] text-[#d4af37]">Experiencias Reales</span>
+            <h2 class="font-cormorant text-4xl md:text-5xl font-bold">Lo que dicen nuestros clientes</h2>
+            <div class="w-16 h-[1px] bg-[#d4af37] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonio 1 -->
+            <div class="bg-[#121212] border border-[#262626] p-8 flex flex-col justify-between space-y-6">
+                <div class="text-[#d4af37] space-x-1 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="font-cormorant italic text-lg text-gray-300">"Noir Intense se ha convertido en mi sello personal. Recibo cumplidos todos los días en la oficina."</p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#262626] flex items-center justify-center font-bold text-sm text-[#d4af37]">MC</div>
+                    <div>
+                        <h5 class="text-xs font-semibold uppercase tracking-wider">Mariana Cruz</h5>
+                        <span class="text-[11px] text-gray-500">Cliente Verificada</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonio 2 -->
+            <div class="bg-[#121212] border border-[#262626] p-8 flex flex-col justify-between space-y-6">
+                <div class="text-[#d4af37] space-x-1 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="font-cormorant italic text-lg text-gray-300">"La presentación y el empaque son de un nivel superior. El aroma dura todo el día sin resultar empalagoso."</p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#262626] flex items-center justify-center font-bold text-sm text-[#d4af37]">AR</div>
+                    <div>
+                        <h5 class="text-xs font-semibold uppercase tracking-wider">Alejandro Ruiz</h5>
+                        <span class="text-[11px] text-gray-500">Cliente Verificado</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonio 3 -->
+            <div class="bg-[#121212] border border-[#262626] p-8 flex flex-col justify-between space-y-6">
+                <div class="text-[#d4af37] space-x-1 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="font-cormorant italic text-lg text-gray-300">"Velvet Rose es delicado, sofisticado y fresco. Simplemente enamorada de esta fragancia."</p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#262626] flex items-center justify-center font-bold text-sm text-[#d4af37]">SV</div>
+                    <div>
+                        <h5 class="text-xs font-semibold uppercase tracking-wider">Sofía Valenzuela</h5>
+                        <span class="text-[11px] text-gray-500">Cliente Verificada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO Y NEWSLETTER -->
+    <section id="contacto" class="py-24 bg-[#121212] border-t border-[#262626] px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="text-xs uppercase tracking-[0.25em] text-[#d4af37]">Mantente Conectado</span>
+            <h2 class="font-cormorant text-4xl md:text-5xl font-bold">Únete al Club Privado</h2>
+            <p class="text-gray-400 text-sm max-w-lg mx-auto">
+                Suscríbete para recibir lanzamientos exclusivos, invitaciones a catas privadas y un 15% de descuento en tu primer pedido.
+            </p>
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
+                <input type="email" id="newsletter-email" placeholder="Ingresa tu correo electrónico" required class="flex-1 bg-[#0b0b0b] border border-[#262626] px-4 py-3 text-sm focus:outline-none focus:border-[#d4af37] text-white">
+                <button type="submit" class="bg-[#d4af37] text-black font-semibold text-xs uppercase tracking-widest px-6 py-3 hover:bg-[#c29d2b] transition-all">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0b0b0b] border-t border-[#262626] py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <a href="#" class="font-cormorant text-2xl tracking-widest text-[#d4af37] font-bold uppercase">Aura Essence</a>
+            <p class="text-xs text-gray-500 tracking-wider">© 2026 Aura Essence. Todos los derechos reservados.</p>
+            <div class="flex space-x-5 text-gray-400 text-sm">
+                <a href="#" class="hover:text-[#d4af37] transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#d4af37] transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#d4af37] transition-colors"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CARRITO DE COMPRAS (DRAWER LATERAL) -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full sm:w-[420px] bg-[#121212] z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col border-l border-[#262626]">
+        <!-- Cabecera del Carrito -->
+        <div class="p-6 border-b border-[#262626] flex items-center justify-between">
+            <h3 class="font-cormorant text-xl font-bold tracking-wider uppercase">Tu Bolsa (<span id="drawer-item-count">0</span>)</h3>
+            <button id="close-cart" class="text-gray-400 hover:text-[#d4af37] text-lg transition-colors"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <!-- Lista de Artículos -->
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6 divide-y divide-[#262626]">
+            <!-- Mensaje de Carrito Vacío -->
+            <div id="empty-cart-msg" class="text-center py-16 space-y-4">
+                <i class="fa-solid fa-bag-shopping text-4xl text-gray-600"></i>
+                <p class="text-gray-400 text-sm">Tu bolsa de compras está vacía.</p>
+            </div>
+        </div>
+
+        <!-- Pie del Carrito -->
+        <div id="cart-footer" class="p-6 border-t border-[#262626] bg-[#0b0b0b] hidden">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm uppercase tracking-wider text-gray-400">Subtotal</span>
+                <span id="cart-subtotal" class="font-cormorant text-2xl font-bold text-[#d4af37]">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="w-full bg-[#d4af37] text-black font-semibold text-xs uppercase tracking-widest py-4 hover:bg-[#c29d2b] transition-all">Proceder al Pago</button>
+        </div>
+    </div>
+    <!-- Fondo oscuro del drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/60 z-40 hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- NOTIFICACIÓN TOAST -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-[#1a1a1a] border border-[#d4af37] text-white px-6 py-4 rounded-sm shadow-2xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-3">
+        <i class="fa-solid fa-circle-check text-[#d4af37]"></i>
+        <span id="toast-message" class="text-xs uppercase tracking-wider font-medium">Producto añadido al carrito</span>
+    </div>
+
+    <!-- Script Principal -->
+    <script src="script.js"></script>
+</body>
+</html>
